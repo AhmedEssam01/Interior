@@ -169,3 +169,14 @@ for (let i = 0; i < galleryContent.length; i++) {
         window.location = 'project.html';
     }
 }
+
+// loader animation
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+    });
+});
